@@ -5,11 +5,11 @@ console.log("testing");
 
 // Table Assignment 
 
+var tab = document.getElementById("tab");
+tab.innerHTML = "";
 
-function tablefunc() {
+function tableFromLast() {
     var tableData = document.getElementById("tableValue").value;
-    var tab = document.getElementById("tab");
-    tab.innerHTML = "";
     for (var i = tableData; i >= 1; i--) {
         tab.innerHTML += "<strong>Table of " + i + ":</strong><br>";
 
@@ -20,6 +20,21 @@ function tablefunc() {
         tab.innerHTML += "<br>";
     }
 }
+
+function tableFromOne() {
+    var tableData = document.getElementById("tableValue").value;
+    for (var w = 1; w <= tableData; w++) {
+        tab.innerHTML += "<strong>Table of " + w + ":</strong><br>";
+        
+        for (var d = 1; d <= 10; d++) {
+            console.log(w + " X " + d + " = " + w * d);
+            tab.innerHTML += (w + " X " + d + " = " + w * d + "<br/>");
+        }
+
+        tab.innerHTML += "<br>";
+    }
+}
+
 // Table Assignment End
 
 
