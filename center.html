@@ -7,21 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main">
+    <div class="main"></div>
         <div class="header">
-            <h1>JS loop Pyramid Assignment</h1>
+            <h1>JS loop Center Pyramid Assignment</h1>
         </div>
         <div class="links">
             <button><a href="./index.html">Home Page</a></button>
             <button><a href="./table.html">Table Assignment</a></button>
-            <button><a href="./center.html">Center Pyramid Assignment</a></button>
+            <button><a href="./pyramid.html">Pyramid Assignment</a></button>
         </div>
         <div class="input">
-            <input type="text" id="pyramidValue" placeholder="Enter Number for Pyramid">
-            <button onclick="pyramidfunc()">Submit</button>
+            <input type="text" id="centerValue" placeholder="Enter Number for Pyramid">
+            <button onclick="single()">Single Pyramid</button>
+            <button onclick="turn()">180 Pyramid</button>
+            <button onclick="double()">Double Pyramid</button>
+            <button onclick="point()">Point Pyramid</button>
         </div>
+        
         <div class="main_pyramid">
-            <div id="pyramid" class="pyramid">
+            <div id="target" class="pyramid">
 
             </div>
         </div>
