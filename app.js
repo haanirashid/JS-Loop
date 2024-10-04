@@ -157,7 +157,7 @@ function double() {
 }
 
 
-function point(){
+function point() {
     centerData = document.getElementById("centerValue").value;
     target = document.getElementById("target");
     target.innerHTML = "";
@@ -199,4 +199,48 @@ function point(){
 
         target.innerHTML += spaces + stars + "<br>";
     }
+}
+
+
+// Asscending Order 
+
+
+var arr = [5, 7, 9, 8, 10, 3, 2];
+// var value;
+var asscendResult = document.getElementById("asscendTarget");
+function asscend() {
+    for (var i = 1; i < arr.length; i++) {
+        // value = arr[i]
+
+        for (var j = 0; j < arr.length - 1; j++) {
+
+            if (arr[j] > arr[j + 1]) {
+                arr.splice(j, 0, arr[j + 1], arr[j]);
+                arr.splice(j + 2, 2);
+            };
+        };
+    };
+    console.log(arr);
+    asscendResult.innerHTML = arr
+
+}
+
+// Descending Order
+
+var descendResult = document.getElementById("descendTarget");
+function descend() {
+    for (var i = 1; i < arr.length; i++) {
+        // value = arr[i]
+
+        for (var j = 0; j < arr.length - 1; j++) {
+
+            if (arr[j] < arr[j + 1]) {
+                arr.splice(j, 0, arr[j + 1], arr[j]);
+                arr.splice(j + 2, 2);
+            };
+        };
+    };
+    console.log(arr);
+    descendResult.innerHTML = arr
+
 }
